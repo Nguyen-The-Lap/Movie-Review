@@ -1,53 +1,82 @@
+# Movie Review Application (Spring Boot)
 
-Welcome to the GitHub repository for the Spring Boot **Movie Review Application**! This project is built with the Spring Boot framework, which provides a powerful and flexible foundation for creating web applications.
+Welcome to the **Spring Boot Movie Review Application**!\
+This project is developed using the Spring Boot framework, offering a
+robust and flexible structure for building modern web applications.
 
-The purpose of this application is to provide users with a platform for reading and writing reviews of their favorite movies. Users can browse a database of movies, read reviews written by other users, and write their own reviews. The application also allows users to rate movies and search for movies based on specific criteria.
+This application provides users with a platform to browse movies, read
+reviews, write their own reviews, and rate films. Users can also search
+for movies based on various filters and criteria.\
+The front-end is built using **HTML, CSS, and JavaScript**, while the
+back-end uses **Spring Boot** and **PostgreSQL**. The entire system is
+designed to be scalable, maintainable, and easily extendable.
 
-The front-end of the application is built using HTML, CSS, and JavaScript, while the back-end is built using Spring Boot and PostgreSQL. The application is designed to be scalable and easily extensible, making it suitable for a wide range of use cases.
+------------------------------------------------------------------------
 
+## 📦 Dependencies
 
-## Dependency
-– If you want to use PostgreSQL:
-```xml
+### PostgreSQL (optional)
+
+``` xml
 <dependency>
-  <groupId>org.postgresql</groupId>
-  <artifactId>postgresql</artifactId>
-  <scope>runtime</scope>
+    <groupId>org.postgresql</groupId>
+    <artifactId>postgresql</artifactId>
+    <scope>runtime</scope>
 </dependency>
 ```
-- For Thymeleaf template engine
-```xml
+
+### Thymeleaf Template Engine
+
+``` xml
 <dependency>
-	<groupId>org.springframework.boot</groupId>
-	<artifactId>spring-boot-starter-thymeleaf</artifactId>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-thymeleaf</artifactId>
 </dependency>
 ```
 
-## Configure Spring Datasource, JPA, App properties
-Open `src/main/resources/application.properties`
-- For PostgreSQL:
-```
-spring.datasource.url= jdbc:postgresql://localhost:5432/dsi
-spring.datasource.username= postgres
-spring.datasource.password= root
+------------------------------------------------------------------------
 
-spring.jpa.properties.hibernate.dialect= org.hibernate.dialect.PostgreSQLDialect
+## ⚙️ Application Configuration
+
+Navigate to:\
+`src/main/resources/application.properties`
+
+### PostgreSQL Configuration
+
+``` properties
+spring.datasource.url=jdbc:postgresql://localhost:5432/dsi
+spring.datasource.username=postgres
+spring.datasource.password=root
+
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
 ```
 
-# Hibernate ddl auto (create, create-drop, validate, update)
+### Hibernate DDL Auto
+
+``` properties
+spring.jpa.hibernate.ddl-auto=update
 ```
-spring.jpa.hibernate.ddl-auto= update
-```
-## Run Spring Boot application
-```
+
+------------------------------------------------------------------------
+
+## ▶️ Running the Application
+
+``` bash
 mvn spring-boot:run
 ```
-## Follow the below steps
-```
-1. First install postgresql 
-2. Postgesql  default usename is : postgres
-3. Postgresql database password should be : root
-4. Need to create a database named `dsi`
-5. Run the code, that will create all tables in `dsi` database.
-6. Then signin as an admin using username `admin` and password `admin` similarly for `user`, `editor` and `creator`
-```
+
+------------------------------------------------------------------------
+
+## 🧰 Setup Instructions
+
+    1. Install PostgreSQL.
+    2. Default PostgreSQL username: postgres
+    3. Set the PostgreSQL password to: root
+    4. Create a database named `dsi`.
+    5. Run the project — all required tables will be automatically created in the `dsi` database.
+    6. Use the following default login credentials:
+
+       Admin:    username `admin`,   password `admin`
+       User:     username `user`,    password `user`
+       Editor:   username `editor`,  password `editor`
+       Creator:  username `creator`, password `creator`
