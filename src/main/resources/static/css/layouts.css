@@ -14,7 +14,6 @@ ul li:hover {
 }
 .navbar-dark .navbar-nav .nav-item:hover .nav-link {
     color: red;
-    /* text-decoration: underline; */
 }
 .navbar-brand {
     font-family: 'SVN-Justice-League', Arial, sans-serif;
@@ -22,8 +21,8 @@ ul li:hover {
 }
 
 .form-control .search-input {
-    border-color: rgb(255, 255, 255); /* Màu viền */
+    border-color: rgb(255, 255, 255);
 }
 .form-control.search-input:focus {
-    box-shadow: 0 0 0 0.2rem #dc143c; /* Màu viền khi focus */
+    box-shadow: 0 0 0 0.2rem #dc143c; /* border-color in focus */
 }

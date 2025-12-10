@@ -29,23 +29,23 @@
 @REM MAVEN_BATCH_PAUSE - set to 'on' to wait for a keystroke before ending
 @REM MAVEN_OPTS - parameters passed to the Java VM when running Maven
 @REM     e.g. to debug Maven itself, use
-@REM set MAVEN_OPTS=-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=8000
+@REM Set MAVEN_OPTS=-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=8000
 @REM MAVEN_SKIP_RC - flag to disable loading of mavenrc files
 @REM ----------------------------------------------------------------------------
 
 @REM Begin all REM lines with '@' in case MAVEN_BATCH_ECHO is 'on'
 @echo off
-@REM set title of command window
+@REM Set title of command window
 title %0
-@REM enable echoing by setting MAVEN_BATCH_ECHO to 'on'
+@REM Enable echoing by setting MAVEN_BATCH_ECHO to 'on'
 @if "%MAVEN_BATCH_ECHO%" == "on"  echo %MAVEN_BATCH_ECHO%
 
-@REM set %HOME% to equivalent of $HOME
+@REM Set %HOME% to equivalent of $HOME
 if "%HOME%" == "" (set "HOME=%HOMEDRIVE%%HOMEPATH%")
 
 @REM Execute a user defined script before this one
 if not "%MAVEN_SKIP_RC%" == "" goto skipRcPre
-@REM check for pre script, once with legacy .bat ending and once with .cmd ending
+@REM Check for pre script, once with legacy .bat ending and once with .cmd ending
 if exist "%HOME%\mavenrc_pre.bat" call "%HOME%\mavenrc_pre.bat"
 if exist "%HOME%\mavenrc_pre.cmd" call "%HOME%\mavenrc_pre.cmd"
 :skipRcPre
@@ -155,7 +155,7 @@ if exist %WRAPPER_JAR% (
 @REM End of extension
 
 @REM Provide a "standardized" way to retrieve the CLI args that will
-@REM work with both Windows and non-Windows executions.
+@REM Work with both Windows and non-Windows executions.
 set MAVEN_CMD_LINE_ARGS=%*
 
 %MAVEN_JAVA_EXE% %JVM_CONFIG_MAVEN_PROPS% %MAVEN_OPTS% %MAVEN_DEBUG_OPTS% -classpath %WRAPPER_JAR% "-Dmaven.multiModuleProjectDirectory=%MAVEN_PROJECTBASEDIR%" %WRAPPER_LAUNCHER% %MAVEN_CONFIG% %*
@@ -169,12 +169,12 @@ set ERROR_CODE=1
 @endlocal & set ERROR_CODE=%ERROR_CODE%
 
 if not "%MAVEN_SKIP_RC%" == "" goto skipRcPost
-@REM check for post script, once with legacy .bat ending and once with .cmd ending
+@REM Check for post script, once with legacy .bat ending and once with .cmd ending
 if exist "%HOME%\mavenrc_post.bat" call "%HOME%\mavenrc_post.bat"
 if exist "%HOME%\mavenrc_post.cmd" call "%HOME%\mavenrc_post.cmd"
 :skipRcPost
 
-@REM pause the script if MAVEN_BATCH_PAUSE is set to 'on'
+@REM Pause the script if MAVEN_BATCH_PAUSE is set to 'on'
 if "%MAVEN_BATCH_PAUSE%" == "on" pause
 
 if "%MAVEN_TERMINATE_CMD%" == "on" exit %ERROR_CODE%
