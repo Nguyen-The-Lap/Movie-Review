@@ -40,7 +40,7 @@
 						<input type="email" class="form-element" id="input_email" name='email' required>
 					</div>
 					<div class="messages">
-					<p th:if="${signupError}" class="error"> Username already exist </p>
+					<p th:if="${signupError}" class="error"> Username already exists </p>
 					</div>
 					<div class="flex">
 						<button type="submit" class="btn btn-primary">Tạo tài khoản</button>
@@ -70,7 +70,7 @@
 
 		<form class="form-container text-center" th:action="@{/signup}" th:object="${user}" method='POST'>
 			<p class="form-title"> Please Register Here </p>
-			<p th:if="${signupError}" class="error"> Username already exist </p>
+			<p th:if="${signupError}" class="error"> Username already exists </p>
 	        <div class="form-group">
 				<label for="input_username">Username</label> 
 				<input type="text" class="form-control" id="input_username" placeholder="Username" name='username' required>
