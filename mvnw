@@ -73,10 +73,10 @@ if [ -z "$JAVA_HOME" ] ; then
 fi
 
 if [ -z "$M2_HOME" ] ; then
-  ## Resolve links - $0 may be a link to maven's home
+  ## resolve links - $0 may be a link to maven's home
   PRG="$0"
 
-  # Need this for relative symlinks
+  # need this for relative symlinks
   while [ -h "$PRG" ] ; do
     ls=`ls -ld "$PRG"`
     link=`expr "$ls" : '.*-> \(.*\)$'`
@@ -91,11 +91,11 @@ if [ -z "$M2_HOME" ] ; then
 
   M2_HOME=`dirname "$PRG"`/..
 
-  # Make it fully qualified
+  # make it fully qualified
   M2_HOME=`cd "$M2_HOME" && pwd`
 
   cd "$saveddir"
-  # Echo Using m2 at $M2_HOME
+  # echo Using m2 at $M2_HOME
 fi
 
 # For Cygwin, ensure paths are in UNIX format before anything is touched
@@ -161,8 +161,8 @@ fi
 
 CLASSWORLDS_LAUNCHER=org.codehaus.plexus.classworlds.launcher.Launcher
 
-# Traverses directory structure from process work directory to filesystem root
-# First directory with .mvn subdirectory is considered project base directory
+# traverses directory structure from process work directory to filesystem root
+# first directory with .mvn subdirectory is considered project base directory
 find_maven_basedir() {
 
   if [ -z "$1" ]
@@ -178,16 +178,16 @@ find_maven_basedir() {
       basedir=$wdir
       break
     fi
-    # Workaround for JBEAP-8937 (on Solaris 10/Sparc)
+    # workaround for JBEAP-8937 (on Solaris 10/Sparc)
     if [ -d "${wdir}" ]; then
       wdir=`cd "$wdir/.."; pwd`
     fi
-    # End of workaround
+    # end of workaround
   done
   echo "${basedir}"
 }
 
-# Concatenates all lines of a file
+# concatenates all lines of a file
 concat_lines() {
   if [ -f "$1" ]; then
     echo "$(tr -s '\n' ' ' < "$1")"
@@ -297,7 +297,7 @@ if $cygwin; then
 fi
 
 # Provide a "standardized" way to retrieve the CLI args that will
-# Work with both Windows and non-Windows executions.
+# work with both Windows and non-Windows executions.
 MAVEN_CMD_LINE_ARGS="$MAVEN_CONFIG $@"
 export MAVEN_CMD_LINE_ARGS
 

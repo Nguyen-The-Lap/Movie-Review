@@ -201,6 +201,15 @@ input[type='text'], input[type='password'], input[type='email'] {
     font-size: 14px;
 }
 
+/* .register-card .form-element{
+    width: 100%;
+    border: none;
+    background-color: #f1f1f1;
+    padding: 20px 30px;
+    font-size: 18px;
+    border-radius: 50px;
+    transition:box-shadow .2s;
+} */
 .form-container {
     border: none !important;
 }
@@ -276,6 +285,33 @@ input[type='text'], input[type='password'], input[type='email'] {
   .separator:not(:empty)::after {
     margin-left: .25em;
   }
+
+/* .social-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-buttons a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    font-size: 22px;
+    color: white;
+    background-color: green;
+    transition: scale .2s;
+}
+
+
+.social-buttons a .facebook{
+    background-color: #3b5998;
+}
+
+.social-buttons a:hover{
+    scale: .95;
+} */
 
 .sign-in-with-google {
     display: flex;

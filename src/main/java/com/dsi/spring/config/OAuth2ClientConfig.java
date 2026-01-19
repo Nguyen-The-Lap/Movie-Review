@@ -16,8 +16,8 @@ public class OAuth2ClientConfig implements ClientRegistrationRepository {
 
     private ClientRegistration googleClientRegistration() {
         return ClientRegistration.withRegistrationId("google")
-                .clientId(System.getenv("GOOGLE_CLIENT_ID"))
-                .clientSecret(System.getenv("GOOGLE_CLIENT_SECRET"))
+                .clientId("419334302130-ho3763ioqf7tg5ettuqnlpb3b1ji24no.apps.googleusercontent.com")
+                .clientSecret("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")
                 .clientAuthenticationMethod(ClientAuthenticationMethod.BASIC)
                 .authorizationGrantType(AuthorizationGrantType.AUTHORIZATION_CODE)
                 .redirectUriTemplate("{baseUrl}/login/oauth2/code/{registrationId}")
